@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
+<link rel="stylesheet" href="weather.css" >
+</head>
+<body class="dark-mode">
+    
+    <button id="dark"><i class="fa-solid fa-circle-half-stroke"></i>&nbsp;&nbsp;Dark</button><br>
+    <div class="main">
+        <h1>WEATHER FINDER</h1>
+        <div>
+            <input type="text"  placeholder="Enter a location" id="input" onkeyup="debouncesearch()"><button id="find">⌕</button>
+            
+        </div>
+        <div id="spin"></div>
+        <p id="card"></p>
+        <h3 id="error"></h3>
+        <h3 id="favorites">☆ Favorites&nbsp;&nbsp;<button id="addfav" style="background-color:rgb(32, 79, 32)">+Add</button></h3>
+         <h4 class="addedfav"></h4>
+
+    
+
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

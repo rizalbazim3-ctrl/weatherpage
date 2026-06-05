@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+}
+
+.dark-mode {
+    background-color: rgb(65, 51, 94);
+}
+h1{
+    color:rgb(6, 98, 98);
+}
+.main{
+    background: linear-gradient(to top,
+     rgb(202, 184, 236),
+     rgb(94, 94, 123),
+     rgb(42, 42, 60)
+
+     );
+    max-width:600px;
+    min-height: 500px;
+    margin:auto;
+    text-align:center;
+    margin-top: 50px;
+    border:1px solid rgb(42, 42, 60);
+    border-radius: 20px;
+
+    
+
+}
+#dark{
+    background-color: #cad0b0;
+    border-radius:40px;
+}
+
+#input{
+    margin-top:30px;
+    width:50%;
+    height:20px;
+    background-color:rgb(237, 225, 225);
+    border: none;
+    border-radius:10px;
+}
+#find{
+    width:10%;
+    background-color: #0a0a09;
+    border: none;
+    border-radius: 5px;
+    font-size:20px;
+    color:rgba(19, 119, 172, 0.847);
+}
+#card{
+    background-color:rgb(116, 116, 156);
+    display:none;
+    margin:auto;
+    margin-top:10px;
+    width:60%;
+    border:1px solid rgb(116, 116, 156);
+    border-radius:20px;
+    color:rgb(16, 19, 17);
+    font-size:25px;
+}
+#error{
+    display:none;
+    border: solid black;
+    margin:auto;
+    margin-top:10px;
+    background-color:rgb(67, 69, 62) ;
+    color:red;
+}
+#favorites{
+    margin:auto;
+    margin-top:10px;
+    border:1px solid gray;
+    border-radius:10px;
+    width:60%;
+    background-color:gray;
+}
+#spin {
+    width:40px;
+    height:40px;
+    border:5px solid lightgray;
+    border-top:5px solid rgb(40, 40, 69);
+    border-radius:50%;
+    margin:auto;
+    margin-top:10px;
+    animation: spinner 1s linear infinite;
+    display:none;
+}
+
+@keyframes spinner{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.remove{
+    background-color:  #4c5136;
+}
+#fav{
+    width:60%;
+    margin:auto;
+    margin-top:5px;
+    background-color: rgb(144, 165, 106);
+    border:1px solid rgb(144, 165, 106);
+    border-radius: 10px;
+}
