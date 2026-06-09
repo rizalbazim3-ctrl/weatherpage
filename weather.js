@@ -23,8 +23,6 @@ async function weatherdetails(){
     spin.style.display="block"
 
     let url=`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`
-    
-    console.log(city.value)
 
     try{
         
@@ -104,20 +102,26 @@ let debouncesearch=debounce(weatherdetails,500)
 let addfav = document.getElementById("addfav")
 
 // Get cities from localStorage or create empty array
-let cities = JSON.parse(localStorage.getItem("cities")) || [];
+let cities = JSON.parse(localStorage.getItem("cities")) ||[];
 
 // Show cities when page loads
 showCities();
 
 addfav.addEventListener("click", () => {
+    if(!cities.includes(city.value) && city.value !== ""){
 
-    cities.push(city.value);
+        cities.push(city.value);
+        
+        localStorage.setItem("cities", JSON.stringify(cities))
+    
+        showCities();
+    }else if (city.value == ""){
+        alert("invalid place")
+    }else{
+        alert("The place already exist")
+    }
+     city.value = "";
 
-    localStorage.setItem("cities", JSON.stringify(cities))
-
-    showCities();
-
-    city.value = "";
 
 });
 
@@ -127,7 +131,7 @@ function showCities() {
 
     cities.forEach((place, index) => {
 
-        addedfav.innerHTML += `<div id="fav">${place}
+             addedfav.innerHTML += `<button id="fav">${place}
                 <button class="remove">✕</button></div>`
 
     })
