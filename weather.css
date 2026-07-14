@@ -1,27 +1,28 @@
 body {
-    background-color: black;
+    background-image: url("cloud.avif");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    height : 100vh;
 }
 
 .dark-mode {
     background-color: rgb(65, 51, 94);
 }
 h1{
-    color:rgb(6, 98, 98);
+    color:rgb(16, 8, 78);
 }
 .main{
-    background: linear-gradient(to top,
-     rgb(202, 184, 236),
-     rgb(94, 94, 123),
-     rgb(42, 42, 60)
-
-     );
+    background: rgba(0, 0, 0, 0.6);
+    
     max-width:600px;
     min-height: 500px;
     margin:auto;
     text-align:center;
     margin-top: 50px;
-    border:1px solid rgb(42, 42, 60);
-    border-radius: 20px;
+    border:1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    
 
     
 
@@ -34,29 +35,32 @@ h1{
 #input{
     margin-top:30px;
     width:50%;
-    height:20px;
-    background-color:rgb(237, 225, 225);
+    height:23px;
+    background-color:white;
     border: none;
-    border-radius:10px;
+    border-radius:5px;
 }
 #find{
     width:10%;
     background-color: #0a0a09;
     border: none;
     border-radius: 5px;
-    font-size:20px;
+    font-size:18px;
+    margin-left: 5px;
     color:rgba(19, 119, 172, 0.847);
 }
 #card{
-    background-color:rgb(116, 116, 156);
+    
     display:none;
+   width:300px;
     margin:auto;
-    margin-top:10px;
-    width:60%;
-    border:1px solid rgb(116, 116, 156);
+    margin-top: 10px;
+    text-align:center;
+    padding:20px;
     border-radius:20px;
-    color:rgb(16, 19, 17);
-    font-size:25px;
+    color:white;
+    font-size: 20px;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
 }
 #error{
     display:none;
@@ -104,4 +108,17 @@ h1{
     background-color: rgb(144, 165, 106);
     border:1px solid rgb(144, 165, 106);
     border-radius: 10px;
+}
+.button{
+    
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#dd4949;
 }

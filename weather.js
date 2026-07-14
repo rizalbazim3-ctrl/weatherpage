@@ -46,22 +46,23 @@ async function weatherdetails(){
     //console.log(data)
 
     
-    weather = `city:${ data.name}<br>
-
-            temp: ${Math.round(data.main.temp)}°C<br>
-
-            feelsLike: ${Math.round(data.main.feels_like)}°C<br>
-
-            description: ${data.weather[0].description}<br>
-
-            humidity: ${data.main.humidity}%<br>
-
-            windSpeed: ${data.wind.speed}m/s`
+    weather = `
+<div class="weather-card">
+<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+    <h3 atyle>${data.name}</h3>
+    <p>Temp: ${Math.round(data.main.temp)}°C</p>
+    <p>Feels Like: ${Math.round(data.main.feels_like)}°C</p>
+    <p>Description: ${data.weather[0].description}</p>
+    <p>Humidity: ${data.main.humidity}%</p>
+    <p>Wind Speed: ${data.wind.speed} m/s</p>
+</div>
+`;
 
             
           /* data.name +"<br>"+ Math.round(data.main.temp)+
     "<br>"+ Math.round(data.main.feels_like) + "<br>"+ data.weather[0].description+"<br>" +
     data.main.humidity + "<br>" + data.wind.speed */
+    
 
     card.innerHTML =weather
 }
@@ -71,10 +72,18 @@ async function weatherdetails(){
     }
     
 }
+//background  themes
+
+let theme = true
 
 dark.addEventListener("click",function(){
-
-     document.body.classList.toggle("dark-mode")
+    if(theme){
+        document.body.style.backgroundImage = "url('nytCloud.jpg')"
+        theme = false
+    }else{
+        document.body.style.backgroundImage = "url('cloud.avif')"
+        theme = true
+    }
 })
 
 //button eventing
@@ -157,4 +166,3 @@ function showCities() {
 
 }
        
-
